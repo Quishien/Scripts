@@ -3,7 +3,7 @@
   local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
   local Window =
 	  OrionLib:MakeWindow(
-	  {Name = "Quish Hub | Flee the Facility [NEW MAPS]", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"}
+	  {Name = "Quish Hub | Refinery Caves", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"}
   )
   
   local vu = game:GetService("VirtualUser")
