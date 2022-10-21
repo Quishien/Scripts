@@ -1,4 +1,4 @@
-  --Open Sourced Dont Steal Code : Quish#4198 : 10/16/2022
+  --Open Sourced Dont Steal Code : Quish#4198 : 10/20/2022
 
   local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
   local Window =
@@ -35,7 +35,7 @@
   Tab:AddParagraph("Made By:", "Quish#4198")
   
   Tab:AddToggle({
-    Name = "Wood Sell Auto-Farm", -- Fixed By : Mouad#9327
+    Name = "Wood Sell Auto-Farm", 
     Default = false,
     Callback = function(Value)
         getgenv().AutoFarmNew = Value
@@ -182,11 +182,19 @@
 	  }
   )
   
+ 
   Tab:AddButton(
 	{
 		Name = "Spawn Meteor For Free",
 		Callback = function()
 		  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Grabable["Meteorite Totem"].Ball.CFrame
+		 task.wait(0.1) 
+		  local args = {
+			[1] = game:GetService("Workspace").Grabable["Meteorite Totem"].Ball,
+			[2] = {}
+		}
+		
+		game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(unpack(args))
 		  task.wait(0.5)
 		  game:GetService("Workspace").Grabable["Meteorite Totem"].Ball.CFrame = CFrame.new(490.649658203125, 303.3324890136719, 710.9194946289062)
 		  task.wait(0.3)
@@ -194,7 +202,37 @@
 		end
 	}
 )
-
+ Tab:AddButton(
+	{
+		Name = "Get Trusty Pickaxe For Free : May Bug Works 50/50",
+		Callback = function()
+		  -- 144, 85, 1106
+--getgenv().trustyfarm = false
+--while trustyfarm do
+    --task.wait()
+for i,v in next, game:GetService("Workspace").Grabable:GetChildren() do
+	if v.Name == "Boxed Stone Pickaxe" or v.Name == "Boxed Rusty Pickaxe" or v.Name == "Boxed Iron Pickaxe" then
+	if v:FindFirstChild("Part") then
+	task.wait(0.1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Part.CFrame
+	task.wait()
+	local args = {
+		[1] = v.Part,
+		[2] = {}
+	}
+	
+	game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(unpack(args))
+	task.wait(0.1)
+	v:FindFirstChild("Part").CFrame = CFrame.new(144, 85, 1106)
+	end
+	end
+	end
+	task.wait(0.1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(134, 89, 1081)
+	--end
+		end
+	}
+)
   local Tab =
 	  Window:MakeTab(
 	  {
@@ -1375,12 +1413,18 @@ Tab:AddButton(
   local Tab =
 	  Window:MakeTab(
 	  {
-		  Name = "Updates",
+		  Name = "Update-Logs",
 		  Icon = "rbxassetid://4483345998",
 		  PremiumOnly = false
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
+  Tab:AddLabel("10/20/2022")
+  Tab:AddParagraph(
+	  "Updates",
+	  "Get Trusty Pickaxe For Free, Fixed Spawn Meteor For Free, Updated W.I.P Features"
+  )
+  Tab:AddLabel("")   
   Tab:AddLabel("10/16/2022")
   Tab:AddParagraph(
 	  "Updates",
@@ -1423,7 +1467,7 @@ Tab:AddButton(
   Tab:AddParagraph("Made By:", "Quish#4198")
   Tab:AddParagraph(
 	  "Upcoming Features:",
-	  "Auto-Mine, Bring Ores To Vehicle Trunk"
+	  "Blueprint Filler, Bring Ores To Vehicle Trunk : [Auto-Mine Cancelled/Discontinued]"
   )
   local Tab =
 	  Window:MakeTab(
@@ -1437,7 +1481,7 @@ Tab:AddButton(
   Tab:AddLabel("Feel free to DM me for any suggestions or bugs.")
   Tab:AddButton(
 	  {
-		  Name = "Copy my discord to clipboard",
+		  Name = "Copy My Discord To ClipBoard",
 		  Callback = function()
 			  setclipboard("Quish#4198")
 		  end
