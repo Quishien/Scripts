@@ -1,4 +1,4 @@
-  --Open Sourced Dont Steal Code : Quish#4198 : 10/20/2022
+  --Open Sourced Dont Steal Code : Quish#4198 : 10/22/2022
 
   local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
   local Window =
@@ -204,7 +204,7 @@
 )
  Tab:AddButton(
 	{
-		Name = "Get Trusty Pickaxe For Free : May Bug Works 50/50",
+		Name = "Get Trusty Pickaxe For Free : May Bug",
 		Callback = function()
 		  -- 144, 85, 1106
 --getgenv().trustyfarm = false
@@ -590,6 +590,141 @@ for i,v in next, game:GetService("Workspace").Grabable:GetChildren() do
 	  }
   )
   
+ 
+
+  local Tab =
+	  Window:MakeTab(
+	  {
+		  Name = "Blueprint Filler",
+		  Icon = "rbxassetid://4483345998",
+		  PremiumOnly = false
+	  }
+  )
+Tab:AddParagraph("Made By:", "Quish#4198")
+-- {"WoodPlank", "WoodPlank2", "ArCobble"}
+
+Tab:AddLabel("This is a work in progress feature so it may bug")
+Tab:AddButton(
+	{
+		Name = "Fill Empty Blueprints With WoodPlank",
+		Callback = function()
+			for i, v in next, game:GetService("Workspace").Plots:GetChildren() do
+				if v.Owner.Value == game.Players.LocalPlayer then
+repeat
+task.wait()
+for b,c in next, v.Objects:GetDescendants() do
+if c.Name == "Blueprint" then
+task.wait(0.1)
+for z,f in next, game:GetService("Workspace").Grabable:GetDescendants() do
+if f.Name == "Info" and f:IsA("StringValue") then
+if f.Value == "WoodPlank" then
+task.wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = f.Parent.CFrame
+task.wait(0.1)
+local args = {
+  [1] = f.Parent,
+  [2] = {}
+}
+
+game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(unpack(args))
+task.wait(0.1)
+f.Parent.CFrame = c.Parent.Part.CFrame
+end
+end
+end
+
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.Part.CFrame
+
+task.wait()
+end
+end
+until c == nil
+end
+end
+		end
+	}
+)
+Tab:AddButton(
+	{
+		Name = "Fill Empty Blueprints With WoodPlank2",
+		Callback = function()
+			for i, v in next, game:GetService("Workspace").Plots:GetChildren() do
+				if v.Owner.Value == game.Players.LocalPlayer then
+repeat
+task.wait()
+for b,c in next, v.Objects:GetDescendants() do
+if c.Name == "Blueprint" then
+task.wait(0.1)
+for z,f in next, game:GetService("Workspace").Grabable:GetDescendants() do
+if f.Name == "Info" and f:IsA("StringValue") then
+if f.Value == "WoodPlank2" then
+task.wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = f.Parent.CFrame
+task.wait(0.1)
+local args = {
+  [1] = f.Parent,
+  [2] = {}
+}
+
+game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(unpack(args))
+task.wait(0.1)
+f.Parent.CFrame = c.Parent.Part.CFrame
+end
+end
+end
+
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.Part.CFrame
+
+task.wait()
+end
+end
+until c == nil
+end
+end
+		end
+	}
+)
+Tab:AddButton(
+	{
+		Name = "Fill Empty Blueprints With ArCobble",
+		Callback = function()
+			for i, v in next, game:GetService("Workspace").Plots:GetChildren() do
+				if v.Owner.Value == game.Players.LocalPlayer then
+repeat
+task.wait()
+for b,c in next, v.Objects:GetDescendants() do
+if c.Name == "Blueprint" then
+task.wait(0.1)
+for z,f in next, game:GetService("Workspace").Grabable:GetDescendants() do
+if f.Name == "Info" and f:IsA("StringValue") then
+if f.Value == "ArCobble" then
+task.wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = f.Parent.CFrame
+task.wait(0.1)
+local args = {
+  [1] = f.Parent,
+  [2] = {}
+}
+
+game:GetService("ReplicatedStorage").Events.Grab:InvokeServer(unpack(args))
+task.wait(0.1)
+f.Parent.CFrame = c.Parent.Part.CFrame
+end
+end
+end
+
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = c.Part.CFrame
+
+task.wait()
+end
+end
+until c == nil
+end
+end
+		end
+	}
+)
+
   local Tab =
 	  Window:MakeTab(
 	  {
@@ -1413,12 +1548,18 @@ Tab:AddButton(
   local Tab =
 	  Window:MakeTab(
 	  {
-		  Name = "Update-Logs",
+		  Name = "Updates",
 		  Icon = "rbxassetid://4483345998",
 		  PremiumOnly = false
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
+  Tab:AddLabel("10/22/2022")
+  Tab:AddParagraph(
+	  "Updates",
+	  "Blueprint Filler"
+  )
+  Tab:AddLabel("")   
   Tab:AddLabel("10/20/2022")
   Tab:AddParagraph(
 	  "Updates",
@@ -1467,7 +1608,7 @@ Tab:AddButton(
   Tab:AddParagraph("Made By:", "Quish#4198")
   Tab:AddParagraph(
 	  "Upcoming Features:",
-	  "Blueprint Filler, Bring Ores To Vehicle Trunk : [Auto-Mine Cancelled/Discontinued]"
+	  "Buy Max Land, Buy All Blueprints, Bring Ores To Specific Coordinates, Bring Ores To Vehicle Trunk : [Auto-Mine Cancelled/Discontinued]"
   )
   local Tab =
 	  Window:MakeTab(
@@ -1478,7 +1619,7 @@ Tab:AddButton(
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
-  Tab:AddLabel("Feel free to DM me for any suggestions or bugs.")
+  Tab:AddLabel("Feel free to DM me for any Suggests. or Bugs")
   Tab:AddButton(
 	  {
 		  Name = "Copy My Discord To ClipBoard",
