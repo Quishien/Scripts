@@ -1,4 +1,4 @@
-  --Open Sourced Dont Steal Code : Quish#4198 : 10/22/2022
+  --Open Sourced Dont Steal Code : Quish#4198 : 10/23/2022
 
   local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
   local Window =
@@ -231,6 +231,23 @@ for i,v in next, game:GetService("Workspace").Grabable:GetChildren() do
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(134, 89, 1081)
 	--end
 		end
+	}
+)
+
+Tab:AddButton(
+	{
+		Name = "Buy Max Land",
+		Callback = function()
+			for count = 12, 1, -1 do
+				task.wait()
+				local args = {
+					[1] = "LandBuy",
+					[2] = count
+				}
+				
+				game:GetService("ReplicatedStorage").Events.ClientEvent:FireServer(unpack(args))
+				end
+			end
 	}
 )
   local Tab =
@@ -1554,6 +1571,12 @@ Tab:AddButton(
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
+  Tab:AddLabel("10/23/2022")
+  Tab:AddParagraph(
+	  "Updates",
+	  "Buy Max Land"
+  )
+  Tab:AddLabel("")    
   Tab:AddLabel("10/22/2022")
   Tab:AddParagraph(
 	  "Updates",
@@ -1608,7 +1631,7 @@ Tab:AddButton(
   Tab:AddParagraph("Made By:", "Quish#4198")
   Tab:AddParagraph(
 	  "Upcoming Features:",
-	  "Buy Max Land, Buy All Blueprints, Bring Ores To Specific Coordinates, Bring Ores To Vehicle Trunk : [Auto-Mine Cancelled/Discontinued]"
+	  "Auto Neon Car, Buy All Blueprints, Bring Ores To Specific Coordinates, Bring Ores To Vehicle Trunk : [Auto-Mine Cancelled/Discontinued]"
   )
   local Tab =
 	  Window:MakeTab(
