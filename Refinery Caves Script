@@ -1,4 +1,4 @@
-  --Open Sourced Dont Steal Code : Quish#4198 : 10/23/2022
+  --Open Sourced Dont Steal Code : Quish#4198 : 10/24/2022
 
   local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
   local Window =
@@ -31,9 +31,9 @@
 		  Icon = "rbxassetid://4483345998",
 		  PremiumOnly = false
 	  }
-  )
+  ) 
   Tab:AddParagraph("Made By:", "Quish#4198")
-  
+  Tab:AddLabel("Auto-Farms")
   Tab:AddToggle({
     Name = "Wood Sell Auto-Farm", 
     Default = false,
@@ -181,9 +181,8 @@
 		  end
 	  }
   )
-  
- 
-  Tab:AddButton(
+  Tab:AddLabel("Free Items")
+ Tab:AddButton(
 	{
 		Name = "Spawn Meteor For Free",
 		Callback = function()
@@ -233,7 +232,29 @@ for i,v in next, game:GetService("Workspace").Grabable:GetChildren() do
 		end
 	}
 )
+Tab:AddLabel("Miscellaneous Main")
 
+Tab:AddToggle({
+    Name = "Extend Cash Display", 
+    Default = false,
+    Callback = function(Value)
+    getgenv().ecd = Value
+	while ecd do
+	task.wait()
+	if ecd == true then
+		function reformatInt(i)
+			return tostring(i):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+		  end
+		  game:GetService("Players").LocalPlayer.PlayerGui.UserGui.Stats.Cash.Text = "$"..reformatInt(game:GetService("Players").LocalPlayer.Values.Saveable.Cash.Value)
+		  
+	end
+
+if ecd == false then
+game:GetService("Players").LocalPlayer.PlayerGui.UserGui.Stats.Cash.Text = "$"..require(game.ReplicatedStorage.Modules.Shortcut).Cash(game.Players.LocalPlayer.Values.Saveable.Cash.Value);
+end
+end
+end
+})
 Tab:AddButton(
 	{
 		Name = "Buy Max Land",
@@ -1571,49 +1592,55 @@ Tab:AddButton(
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
+  Tab:AddLabel("10/24/2022")
+  Tab:AddParagraph(
+	  "Updates",
+	  "Extend Cash Display, Better Tabs In Main"
+  )
+     
   Tab:AddLabel("10/23/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Buy Max Land"
   )
-  Tab:AddLabel("")    
+      
   Tab:AddLabel("10/22/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Blueprint Filler"
   )
-  Tab:AddLabel("")   
+     
   Tab:AddLabel("10/20/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Get Trusty Pickaxe For Free, Fixed Spawn Meteor For Free, Updated W.I.P Features"
   )
-  Tab:AddLabel("")   
+     
   Tab:AddLabel("10/16/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Spawn Meteor For Free, Dumortierite Ore Teleport, Tolmedit Ore Teleport, Moonstone Ore Teleport, W.I.P Features Tab, Wood Sell Auto-Farm Fixed"
   )
-  Tab:AddLabel("")  
+    
   Tab:AddLabel("10/13/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Wood Sell Auto-Farm, Keybind To Sell Current Held Ore Script, Item/Ore Features Tab, Bring Ores To Furnace, Bring Held Ore To Furnace, Bring Held Ore To Compactor"
   )
-  Tab:AddLabel("")
+  
   Tab:AddLabel("10/11/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "Fixed Bring Ore To Compactor, Bring Held Item To Plot Keybind Script, More Teleports, Smoother Updates For Scripts, Always Clear Weather"
   )
-  Tab:AddLabel("")
+  
   Tab:AddLabel("10/10/2022")
   Tab:AddParagraph(
 	  "Updates",
 	  "BoxAutoFarm Fixes, Suggestions Tab, Toggleable Rain, Better Bring/Sell Ore Feature, Added Bring Ores To Compactor"
   )
   Tab:AddParagraph("BoxAutoFarm Fixes", "Fixed Disabling The AutoFarm It Will Stop Immediately")
-  Tab:AddLabel("")
+  
   Tab:AddLabel("10/9/2022")
   Tab:AddParagraph(
 	  "Updates",
@@ -1642,7 +1669,8 @@ Tab:AddButton(
 	  }
   )
   Tab:AddParagraph("Made By:", "Quish#4198")
-  Tab:AddLabel("Feel free to DM me for any Suggests. or Bugs")
+  Tab:AddParagraph("Quish:", "Feel free to DM me for any Suggestions or Bugs")
+  --Tab:AddLabel("Feel free to DM me for any Suggestions or Bugs")
   Tab:AddButton(
 	  {
 		  Name = "Copy My Discord To ClipBoard",
