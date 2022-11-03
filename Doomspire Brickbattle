@@ -31,7 +31,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
         Max = 500,
         Default = 1,
         Color = Color3.fromRGB(255,255,255),
-        Increment = 50,
+        Increment = 1,
         ValueName = "Jumppower",
         Callback = function(Value)
             game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
