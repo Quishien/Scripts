@@ -1,0 +1,143 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
+    -- TABS
+    local LocalTab = Window:MakeTab({
+        Name = "Local Player",
+        Icon = "rbxassetid://11457982589",
+        PremiumOnly = false
+    })
+    
+
+    -- LABELS
+    LocalTab:AddLabel("Local Player Stuff")
+
+    -- SLIDERS
+    LocalTab:AddSlider({
+        Name = "Walkspeed",
+        Min = 16,
+        Max = 500,
+        Default = 16,
+        Color = Color3.fromRGB(255,255,255),
+        Increment = 1,
+        ValueName = "Walkspeed",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+        end    
+    })
+    
+    LocalTab:AddSlider({
+        Name = "Jumppower",
+        Min = 50,
+        Max = 500,
+        Default = 1,
+        Color = Color3.fromRGB(255,255,255),
+        Increment = 50,
+        ValueName = "Jumppower",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+        end    
+    })
+    -- LABELS
+    LocalTab:AddLabel("Other Stuff")
+
+    -- BUTTONS
+    LocalTab:AddButton({
+        Name = "Infinite Yield",
+        Callback = function()
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'), true))()
+          end    
+    })
+      
+    -- BUTTONS
+    LocalTab:AddButton({
+        Name = "Esp",
+        Callback = function()
+            local Esp = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/x114/RobloxScripts/main/OpenSourceEsp"))()
+            -- Boxes --
+            Esp.Box = true
+            Esp.BoxColor = Color3.fromRGB(255,255,255)
+            Esp.BoxOutline = true
+            Esp.BoxOutlineColor = Color3.fromRGB(0,0,0)
+            -- HealthBars --
+            Esp.HealthBar = true
+            Esp.HealthBarSide = "Left" -- Left,Bottom,Right
+            -- Names --
+            Esp.Names = true
+            Esp.NamesColor = Color3.fromRGB(255,255,255)
+            Esp.NamesOutline = true
+            Esp.NamesFont = 2
+            Esp.NamesSize = 13
+          end    
+    })
+
+    -- TABS
+    local TeleportTab = Window:MakeTab({
+        Name = "Teleports",
+        Icon = "rbxassetid://11457978655",
+        PremiumOnly = false
+    })
+    
+    -- LABELS
+    TeleportTab:AddLabel("Teleport To Base")
+    
+    -- BUTTONS
+    TeleportTab:AddButton({
+        Name = "Red Base",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-131.069504, 24.8000183, 0.276372671, -0.959334731, 5.83265738e-08, -0.282270849, 5.69691103e-08, 1, 1.30163107e-08, 0.282270849, -3.59372065e-09, -0.959334731)
+          end    
+    })
+    
+    -- BUTTONS
+    TeleportTab:AddButton({
+        Name = "Blue Base",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.1439531, 24.8000412, 131.298996, 0.999866605, 5.7359113e-09, 0.0163331814, -5.96680838e-09, 1, 1.4087945e-08, -0.0163331814, -1.41835228e-08, 0.999866605)
+          end    
+    })
+    
+    -- BUTTONS
+    TeleportTab:AddButton({
+        Name = "Green Base",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.101770692, 24.8000412, -131.207291, -0.999731362, -2.6844611e-09, 0.0231771767, -1.54334412e-09, 1, 4.9252403e-08, -0.0231771767, 4.9203404e-08, -0.999731362)
+          end    
+    })
+    
+    -- BUTTONS
+    TeleportTab:AddButton({
+        Name = "Yellow Base",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(131.039841, 24.8000031, -0.0567275621, 0.0115916021, -9.45887706e-08, 0.999932826, 3.1841914e-08, 1, 9.4226003e-08, -0.999932826, 3.07475467e-08, 0.0115916021)
+          end    
+    })
+
+    -- BUTTONS
+    TeleportTab:AddButton({
+        Name = "Teleport To Spectate",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.182455927, 518.999817, -0.701554537, -0.00837930664, 5.06705744e-09, -0.999964893, 2.85036439e-09, 1, 5.04335063e-09, 0.999964893, -2.8080045e-09, -0.00837930664)
+          end    
+    })
+
+    -- LABELS
+    TeleportTab:AddLabel("Teleport To Player")
+    
+    -- ADAPTIVE INPUTS
+    TeleportTab:AddTextbox({
+	Name = "Teleport to player",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local p2 = (Value)
+		local pos = p1.CFrame
+		
+		p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+	end	  
+})
+
+
+
+
+OrionLib:Init()
