@@ -42,6 +42,14 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
 
     -- BUTTONS
     LocalTab:AddButton({
+        Name = "Kill All",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Rollimonster/roblox-tp-all-head/main/roblox%20tp%20all%20head", true))()
+          end    
+    })
+
+    -- BUTTONS
+    LocalTab:AddButton({
         Name = "Infinite Yield",
         Callback = function()
             loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'), true))()
