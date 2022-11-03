@@ -4,5 +4,7 @@ if game.PlaceId == 2913303231 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
         elseif game.PlaceId == 8726743209 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Refinery%20Caves%20Script", true))()
+            elseif game.PlaceId == 1215581239 then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doomspire%20Brickbattle"))()
     end
     
