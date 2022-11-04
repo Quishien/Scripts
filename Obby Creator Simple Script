@@ -1,11 +1,10 @@
 if game.PlaceId == 2913303231 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Quish Hub | Obby Creator", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
-
 -- Tabs
 local LocalPlayerTab = Window:MakeTab({
-	Name = "LocalPlayer",
-	Icon = "rbxassetid://4483345998",
+	Name = "Local Player",
+	Icon = "rbxassetid://11464378104",
 	PremiumOnly = false
 })
 
@@ -79,7 +78,7 @@ local Section = LocalPlayerTab:AddSection({
 -- Tabs
 local TrollTab = Window:MakeTab({
 	Name = "Troll",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://11464409331",
 	PremiumOnly = false
 })
 
@@ -173,12 +172,12 @@ TrollTab:AddButton({
 		notifSound.SoundId = "rbxassetid://170765130"
 		notifSound.PlayOnRemove = true
 		notifSound:Destroy()
-		game.StarterGui:SetCore("SendNotification", {Title = "Flipping Script", Text = "Flipping Script loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+		game.StarterGui:SetCore("SendNotification", {Title = "Flipping Script", Text = "Flipping Script loaded successfully!", Icon = "rbxassetid://505845268", Duration = 3.5, Button1 = "Okay"})
 		print(scriptname .. " " .. ver .. " loaded successfully")
 		print("made by Quish#4198")
 		
 
-		wait(10)
+		wait(4)
 
 		local notifSound = Instance.new("Sound",workspace)
 		notifSound.PlaybackSpeed = 1.5
@@ -186,7 +185,7 @@ TrollTab:AddButton({
 		notifSound.SoundId = "rbxassetid://170765130"
 		notifSound.PlayOnRemove = true
 		notifSound:Destroy()
-		game.StarterGui:SetCore("SendNotification", {Title = "Keybinds", Text = "Backflip = X, Frontflip = Y, Infinite Jump = C", Icon = "rbxassetid://505845268", Duration = 5})
+		game.StarterGui:SetCore("SendNotification", {Title = "Keybinds", Text = "Backflip = X, Frontflip = Y, Infinite Jump = C", Icon = "rbxassetid://11464312986", Duration = 5})
   	end    
 })
 
@@ -222,19 +221,46 @@ TrollTab:AddTextbox({
 })
 
 -- Tabs
-local Credits = Window:MakeTab({
-	Name = "Credits",
-	Icon = "rbxassetid://4483345998",
+local WipTab = Window:MakeTab({
+	Name = "W.I.P",
+	Icon = "rbxassetid://11464378096",
+	PremiumOnly = false
+})
+
+-- Paragraphs
+WipTab:AddParagraph("Upcoming Features","None yet.")
+
+-- Tabs
+local UpdateTab = Window:MakeTab({
+	Name = "Updates",
+	Icon = "rbxassetid://11464394258",
 	PremiumOnly = false
 })
 
 -- Labels
-Credits:AddLabel("Everything was made by Quish#4198.")
+UpdateTab:AddLabel("11/04/2022")
+
+-- Paragraphs
+UpdateTab:AddParagraph("Updates","Made Script.")
 
 
--- Sections
-local Section = Credits:AddSection({
-	Name = "Join my discord and have a nice day!"
+-- TABS
+local CreditsTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://11464378093",
+	PremiumOnly = false
+})
+
+-- PARAGRAPHS
+CreditsTab:AddParagraph("Made By:", "Quish#4198")
+CreditsTab:AddParagraph("Quish:", "Feel free to DM me for any Suggestions or Bugs")
+
+-- BUTTONS
+CreditsTab:AddButton({
+	Name = "Copy My Discord To Clipboard",
+	Callback = function()
+		setclipboard("Quish#4198")
+	  end    
 })
 
 
