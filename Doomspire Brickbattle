@@ -3,7 +3,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
     -- TABS
     local LocalTab = Window:MakeTab({
         Name = "Local Player",
-        Icon = "rbxassetid://11457982589",
+        Icon = "rbxassetid://11464378104",
         PremiumOnly = false
     })
     
@@ -81,7 +81,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
     -- TABS
     local TeleportTab = Window:MakeTab({
         Name = "Teleports",
-        Icon = "rbxassetid://11457978655",
+        Icon = "rbxassetid://11464378091",
         PremiumOnly = false
     })
     
@@ -148,7 +148,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
     -- TABS
     local WipTab = Window:MakeTab({
         Name = "W.I.P",
-        Icon = "rbxassetid://11458124158",
+        Icon = "rbxassetid://11464378096",
         PremiumOnly = false
     })
     
@@ -158,7 +158,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
     -- TABS
     local UpdateTab = Window:MakeTab({
         Name = "Updates",
-        Icon = "rbxassetid://11458086900",
+        Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
     
@@ -171,7 +171,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
     -- TABS
     local CreditsTab = Window:MakeTab({
         Name = "Credits",
-        Icon = "rbxassetid://11458142706",
+        Icon = "rbxassetid://11464378093",
         PremiumOnly = false
     })
     
