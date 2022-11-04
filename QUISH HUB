@@ -1,8 +1,11 @@
 if game.PlaceId == 2913303231 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Obby%20Creator%20Simple%20Script"))()
-    elseif game.PlaceId == 8726743209 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Refinery%20Caves%20Script", true))()
-        elseif game.PlaceId == 1215581239 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doomspire%20Brickbattle"))()
-    end
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Obby%20Creator"))()
+    elseif game.PlaceId == 893973440 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
+        elseif game.PlaceId == 8726743209 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Refinery%20Caves%20Script", true))()
+            elseif game.PlaceId == 6839171747 then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doors", true))()
+            end
+
     
