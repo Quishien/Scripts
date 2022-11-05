@@ -75,6 +75,140 @@ local Section = LocalPlayerTab:AddSection({
 })
 
 -- Tabs
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://11465887529",
+	PremiumOnly = false
+})
+
+-- Labels
+MainTab:AddLabel("Main Stuff")
+
+-- Adaptive Inputs
+MainTab:AddTextbox({
+	Name = "Bring Player",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		---- Made By David/Divine#6170
+		local CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+		local Target = Value
+
+		for i,x in pairs(game.Players:GetPlayers()) do
+
+			if x.Name == Target then
+
+				game:GetService("Players").LocalPlayer.Character.Humanoid:UnequipTools()
+
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid:Clone()
+
+				Humanoid.BreakJointsOnDeath = false
+
+				game.Players.LocalPlayer.Character.Animate.Disabled = true
+
+				game:GetService("Players").LocalPlayer.Character.Humanoid:Destroy()
+
+				Humanoid.Parent = game:GetService("Players").LocalPlayer.Character
+
+				for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+
+					if v:IsA("Tool") then
+
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool"))
+
+						firetouchinterest(v.Handle,x.Character.HumanoidRootPart,0)
+
+					end
+
+				end
+
+			end
+
+		end
+
+		game.Players.LocalPlayer.CharacterAdded:Wait():WaitForChild("Humanoid")
+
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame
+	end	  
+})
+
+-- Labels
+MainTab:AddLabel("Other Stuff")
+
+-- Adaptive Input
+MainTab:AddTextbox({
+	Name = "Teleport to player",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+		local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local p2 = (Value)
+		local pos = p1.CFrame
+		
+		p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+	end	  
+})
+
+-- BUTTONS
+MainTab:AddButton({
+	Name = "Display Name Remover",
+	Callback = function()
+		local Players = game:FindService("Players")
+
+
+
+		require(game:GetService("Chat"):WaitForChild("ClientChatModules").ChatSettings).PlayerDisplayNamesEnabled = false
+
+
+
+		local function rename(character,name)
+
+			repeat task.wait() until character:FindFirstChildWhichIsA("Humanoid")
+
+			character:FindFirstChildWhichIsA("Humanoid").DisplayName = name
+
+		end
+
+
+
+		for i,v in next, Players:GetPlayers() do
+
+			if v.Character then
+
+				v.DisplayName = v.Name
+
+				rename(v.Character,v.Name)
+
+			end
+
+			v.CharacterAdded:Connect(function(char)
+
+				rename(char,v.Name)
+
+			end)
+
+		end
+
+
+
+		Players.PlayerAdded:Connect(function(plr)
+
+			plr.DisplayName = plr.Name
+
+			plr.CharacterAdded:Connect(function(char)
+
+				rename(char,plr.Name)
+
+			end)
+
+		end)
+
+	end    
+})
+
+
+-- Tabs
 local TrollTab = Window:MakeTab({
 	Name = "Troll",
 	Icon = "rbxassetid://11464409331",
@@ -202,23 +336,6 @@ local Section = TrollTab:AddSection({
 	Name = "Chat bypass may not work! (I didn't make this)"
 })
 
--- Labels
-TrollTab:AddLabel("Other Stuff")
-
--- Adaptive Input
-TrollTab:AddTextbox({
-	Name = "Teleport to player",
-	Default = "",
-	TextDisappear = false,
-	Callback = function(Value)
-		local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		local p2 = (Value)
-		local pos = p1.CFrame
-		
-		p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
-	end	  
-})
-
 -- Tabs
 local WipTab = Window:MakeTab({
 	Name = "W.I.P",
@@ -227,7 +344,7 @@ local WipTab = Window:MakeTab({
 })
 
 -- Paragraphs
-WipTab:AddParagraph("Upcoming Features","None yet.")
+WipTab:AddParagraph("Upcoming Features","Adding QOL features soon.")
 
 -- Tabs
 local UpdateTab = Window:MakeTab({
@@ -235,6 +352,12 @@ local UpdateTab = Window:MakeTab({
 	Icon = "rbxassetid://11464394258",
 	PremiumOnly = false
 })
+
+-- Labels
+UpdateTab:AddLabel("11/05/2022")
+
+-- Paragraphs
+UpdateTab:AddParagraph("Updates","Added bring player, a display name remover and a main tab.")
 
 -- Labels
 UpdateTab:AddLabel("11/04/2022")
