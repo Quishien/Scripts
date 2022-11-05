@@ -6,6 +6,8 @@ if game.PlaceId == 2913303231 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Refinery%20Caves%20Script", true))()
             elseif game.PlaceId == 6839171747 then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doors", true))()
+                elseif game.PlaceId == 189707 then
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Natural%20Disaster%20Survival", true))()
             end
 
     
