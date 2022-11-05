@@ -7,7 +7,6 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         PremiumOnly = false
     })
     
-
     -- LABELS
     LocalTab:AddLabel("Local Player Stuff")
 
@@ -138,6 +137,9 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         end    
     })
 
+    -- LABELS
+    MainTab:AddLabel("Other Stuff")
+
     -- BUTTONS
     MainTab:AddButton({
         Name = "Disable Fall Damage",
@@ -146,29 +148,45 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         end   
     })
 
-    -- TABS
-    local TeleportTab = Window:MakeTab({
-        Name = "Teleports",
-        Icon = "rbxassetid://11464378091",
+     -- TABS
+     local MiscTab = Window:MakeTab({
+        Name = "Misc.",
+        Icon = "rbxassetid://11477286363",
         PremiumOnly = false
     })
 
     -- LABELS
-    TeleportTab:AddLabel("Main Teleports")
+    MiscTab:AddLabel("Main Stuff")
 
     -- BUTTONS
-    TeleportTab:AddButton({
-        Name = "Island",
+    MiscTab:AddButton({
+        Name = "Remove Sandstorm GUI",
         Callback = function()
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108, 49, 0)
+            game.Players.LocalPlayer.PlayerGui.SandStormGui:destroy()
+          end    
+    })
+    
+    -- BUTTONS
+    MiscTab:AddButton({
+        Name = "Remove Blizzard GUI",
+        Callback = function()
+            game.Players.LocalPlayer.PlayerGui.BlizzardGui:destroy()
           end    
     })
 
+    -- LABELS
+    MiscTab:AddLabel("Other Stuff")
+
     -- BUTTONS
-    TeleportTab:AddButton({
-        Name = "Tower",
+    MiscTab:AddButton({
+        Name = "Current Disaster",
         Callback = function()
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-264, 196, 288)
+            OrionLib:MakeNotification({
+                Name = "Current Disaster is:",
+                Content = game.Players.LocalPlayer.Character.SurvivalTag.Value,
+                Image = "rbxassetid://11477316029",
+                Time = 3
+            })
           end    
     })
 
@@ -178,6 +196,27 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         Icon = "rbxassetid://11477211478",
         PremiumOnly = false
     })
+    -- LABELS
+    FunTab:AddLabel("Main Stuff")
+
+    -- BUTTONS
+    FunTab:AddButton({
+        Name = "Say Current Disaster",
+        Callback = function()
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(game.Players.LocalPlayer.Character.SurvivalTag.Value, "All")
+          end    
+    })
+    
+    -- BUTTONS
+    FunTab:AddButton({
+        Name = "Remove Ads",
+        Callback = function()
+            game:GetService("Workspace").BillboardAd:Destroy()
+            game:GetService("Workspace").ForwardPortal:Destroy()
+            game:GetService("Workspace").ReturnPortal:Destroy()
+        end
+    })
+
     -- LABELS
     FunTab:AddLabel("Random Stuff")
 
@@ -236,65 +275,32 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         
     })
 
-    -- BUTTONS
-    FunTab:AddButton({
-        Name = "Say Current Disaster",
-        Callback = function()
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(game.Players.LocalPlayer.Character.SurvivalTag.Value, "All")
-          end    
-    })
-    
-    -- BUTTONS
-    FunTab:AddButton({
-        Name = "Remove Ads",
-        Callback = function()
-            game:GetService("Workspace").BillboardAd:Destroy()
-            game:GetService("Workspace").ForwardPortal:Destroy()
-            game:GetService("Workspace").ReturnPortal:Destroy()
-        end
-    })
-
     -- TABS
-    local MiscTab = Window:MakeTab({
-        Name = "Misc.",
-        Icon = "rbxassetid://11477286363",
+    local TeleportTab = Window:MakeTab({
+        Name = "Teleports",
+        Icon = "rbxassetid://11464378091",
         PremiumOnly = false
     })
 
     -- LABELS
-    TeleportTab:AddLabel("Main Stuff")
+    TeleportTab:AddLabel("Main Teleports")
 
     -- BUTTONS
-    MiscTab:AddButton({
-        Name = "Remove Sandstorm GUI",
+    TeleportTab:AddButton({
+        Name = "Island",
         Callback = function()
-            game.Players.LocalPlayer.PlayerGui.SandStormGui:destroy()
-          end    
-    })
-    
-    -- BUTTONS
-    MiscTab:AddButton({
-        Name = "Remove Blizzard GUI",
-        Callback = function()
-            game.Players.LocalPlayer.PlayerGui.BlizzardGui:destroy()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108, 49, 0)
           end    
     })
 
-    -- LABELS
-    TeleportTab:AddLabel("Other Stuff")
-
     -- BUTTONS
-    MiscTab:AddButton({
-        Name = "Current Disaster",
+    TeleportTab:AddButton({
+        Name = "Tower",
         Callback = function()
-            OrionLib:MakeNotification({
-                Name = "Current Disaster is:",
-                Content = game.Players.LocalPlayer.Character.SurvivalTag.Value,
-                Image = "rbxassetid://11477316029",
-                Time = 3
-            })
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-264, 196, 288)
           end    
     })
+
 
     -- TABS
     local WipTab = Window:MakeTab({
