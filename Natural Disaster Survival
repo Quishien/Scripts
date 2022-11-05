@@ -160,6 +160,64 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
 
     -- BUTTONS
     MiscTab:AddButton({
+        Name = "Display Name Remover",
+        Callback = function()
+            local Players = game:FindService("Players")
+
+
+
+            require(game:GetService("Chat"):WaitForChild("ClientChatModules").ChatSettings).PlayerDisplayNamesEnabled = false
+
+
+
+            local function rename(character,name)
+
+                repeat task.wait() until character:FindFirstChildWhichIsA("Humanoid")
+
+                character:FindFirstChildWhichIsA("Humanoid").DisplayName = name
+
+            end
+
+
+
+            for i,v in next, Players:GetPlayers() do
+
+                if v.Character then
+
+                    v.DisplayName = v.Name
+
+                    rename(v.Character,v.Name)
+
+                end
+
+                v.CharacterAdded:Connect(function(char)
+
+                    rename(char,v.Name)
+
+                end)
+
+            end
+
+
+
+            Players.PlayerAdded:Connect(function(plr)
+
+                plr.DisplayName = plr.Name
+
+                plr.CharacterAdded:Connect(function(char)
+
+                    rename(char,plr.Name)
+
+                end)
+
+            end)
+
+        end    
+    })
+
+
+    -- BUTTONS
+    MiscTab:AddButton({
         Name = "Remove Sandstorm GUI",
         Callback = function()
             game.Players.LocalPlayer.PlayerGui.SandStormGui:destroy()
@@ -198,6 +256,55 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
     })
     -- LABELS
     FunTab:AddLabel("Main Stuff")
+    
+    -- ADAPTIVE INPUTS
+    FunTab:AddTextbox({
+        Name = "Bring Player",
+        Default = "",
+        TextDisappear = true,
+        Callback = function(Value)
+            ---- Made By David/Divine#6170
+            local CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+            local Target = Value
+
+            for i,x in pairs(game.Players:GetPlayers()) do
+
+                if x.Name == Target then
+
+                    game:GetService("Players").LocalPlayer.Character.Humanoid:UnequipTools()
+
+                    local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid:Clone()
+
+                    Humanoid.BreakJointsOnDeath = false
+
+                    game.Players.LocalPlayer.Character.Animate.Disabled = true
+
+                    game:GetService("Players").LocalPlayer.Character.Humanoid:Destroy()
+
+                    Humanoid.Parent = game:GetService("Players").LocalPlayer.Character
+
+                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+
+                        if v:IsA("Tool") then
+
+                            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool"))
+
+                            firetouchinterest(v.Handle,x.Character.HumanoidRootPart,0)
+
+                        end
+
+                    end
+
+                end
+
+            end
+
+            game.Players.LocalPlayer.CharacterAdded:Wait():WaitForChild("Humanoid")
+
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame
+        end	  
+    })
 
     -- BUTTONS
     FunTab:AddButton({
@@ -323,7 +430,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
     UpdateTab:AddLabel("11/05/2022")
     
     -- PARAGRAPHS
-    UpdateTab:AddParagraph("Updates","Made Script.")
+    UpdateTab:AddParagraph("Updates","Made Script. Added Bring Player.")
 
     -- TABS
     local CreditsTab = Window:MakeTab({
