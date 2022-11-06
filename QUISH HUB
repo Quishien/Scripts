@@ -13,10 +13,11 @@ elseif game.PlaceId == 6839171747 then
 elseif game.PlaceId == 189707 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Natural%20Disaster%20Survival", true))()
     return
-elseif game.PlaceId == 2788229376 or 7213786345 then
+elseif game.PlaceId == 2788229376 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Da%20Hood", true))()
-    return             
+    return
+elseif game.PlaceId == 7213786345 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Da%20Hood", true))()
+    return
 end
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
-
-    
