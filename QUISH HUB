@@ -19,5 +19,8 @@ elseif game.PlaceId == 2788229376 then
 elseif game.PlaceId == 7213786345 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Da%20Hood", true))()
     return
+elseif game.PlaceId == 893973440 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
+    return
 end
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
