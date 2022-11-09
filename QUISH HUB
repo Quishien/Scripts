@@ -22,5 +22,30 @@ elseif game.PlaceId == 7213786345 then
 elseif game.PlaceId == 893973440 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
     return
+elseif game.PlaceId == 10324346056 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 10324347967 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 10324346056 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 10539706691 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 10662542523 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 10808838353 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 11353532384 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
+elseif game.PlaceId == 11353528705 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
 end
+
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
