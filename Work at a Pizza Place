@@ -98,6 +98,9 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Work at a Pizza Place", 
           end    
     })
 
+    -- LABELS
+    MainTab:AddLabel("Other Stuff")
+
     -- DROPDOWNS
     MainTab:AddDropdown({
         Name = "Locations",
