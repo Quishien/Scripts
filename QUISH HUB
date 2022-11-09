@@ -49,6 +49,18 @@ elseif game.PlaceId == 11353532384 then
 elseif game.PlaceId == 11353528705 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
     return
+elseif game.PlaceId == 537413528 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    return
+elseif game.PlaceId == 1930665568 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    return
+elseif game.PlaceId == 1930863474 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    return
+elseif game.PlaceId == 1930866268 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    return
 end
 
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
