@@ -70,6 +70,9 @@ elseif game.PlaceId == 2898101897 then
 elseif game.PlaceId == 3824662112 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/3008", true))()
     return
+elseif game.PlaceId == 192800 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Work%20at%20a%20Pizza%20Place", true))()
+    return
 end
 
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
