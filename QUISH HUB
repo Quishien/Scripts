@@ -22,6 +22,9 @@ elseif game.PlaceId == 7213786345 then
 elseif game.PlaceId == 893973440 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
     return
+elseif game.PlaceId == 9872472334 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    return
 elseif game.PlaceId == 10324346056 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
     return
