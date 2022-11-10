@@ -132,6 +132,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Build A Boat For Treasur
             game.Players.LocalPlayer.Character:MoveTo(FinalPart.Position)
             
             wait(20)
+            workspace.ClaimRiverResultsGold:FireServer()
             game.Players.LocalPlayer.PlayerGui.LaunchBoatGui.PromptLaunch.Visible = true
             wait(1)
             -- The function that takes place when the button is pressed
@@ -190,6 +191,7 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Build A Boat For Treasur
                 game.Players.LocalPlayer.Character:MoveTo(FinalPart.Position)
                 
                 wait(20)
+                workspace.ClaimRiverResultsGold:FireServer()
                 game.Players.LocalPlayer.PlayerGui.LaunchBoatGui.PromptLaunch.Visible = true
                 wait(1)
                 OrionLib:MakeNotification({
@@ -226,6 +228,9 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Build A Boat For Treasur
         PremiumOnly = false
     })
     
+    -- LABELS
+    UtilityTab:AddLabel("Main Stuff")
+    
     -- BUTTONS
     UtilityTab:AddButton({
         Name = "Launch boat bypass",
@@ -236,12 +241,54 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Build A Boat For Treasur
 
     -- BUTTONS
     UtilityTab:AddButton({
-        Name = "Walk on water (First Stage Only)",
+        Name = "Walk on water",
         Callback = function()
-            workspace.Water:Destroy()
+            while true do
+                LocalPlayerName = game:GetService("Players").LocalPlayer.Name
+                LocalPlayerWorkspace = game:GetService("Workspace")[LocalPlayerName]
+                LocalPlayerWorkspace.WaterDetector:Destroy()
+                print("Water Godmode Enabled")
+                wait(1)
+            end
+        end    
+    })
+    
+    -- LABELS
+    UtilityTab:AddLabel("Other Stuff")
+
+    -- BUTTONS
+    UtilityTab:AddButton({
+        Name = "Fox Character",
+        Callback = function()
+            CC = game:GetService("Workspace").ChangeCharacter
+            CC:FireServer("FoxCharacter")
+            print("Successfully Changed To Fox Character")
           end    
     })
 
+    -- BUTTONS
+    UtilityTab:AddButton({
+        Name = "Chicken Character",
+        Callback = function()
+            CC = game:GetService("Workspace").ChangeCharacter
+            CC:FireServer("ChickenCharacter")
+            print("Successfully Changed To Chicken Character")
+          end    
+    })
+
+    -- BUTTONS
+    UtilityTab:AddButton({
+        Name = "Penguin Character",
+        Callback = function()
+            CC = game:GetService("Workspace").ChangeCharacter
+            CC:FireServer("PenguinCharacter")
+            print("Successfully Changed To Penguin Character")
+          end    
+    })
+
+     -- PARAGRAPHS
+     UtilityTab:AddParagraph("Characters","Going to fix soon.")
+    
     -- TABS
     local WipTab = Window:MakeTab({
         Name = "W.I.P",
@@ -258,6 +305,12 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Build A Boat For Treasur
         Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
+
+     -- LABELS
+     UpdateTab:AddLabel("11/10/2022")
+    
+     -- PARAGRAPHS
+     UpdateTab:AddParagraph("Updates","Added characters (Buggy) fixed water walker not working on other stages.")
 
     -- LABELS
     UpdateTab:AddLabel("11/09/2022")
