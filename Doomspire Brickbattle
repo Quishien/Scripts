@@ -139,60 +139,6 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
         end	  
     })
 
-    -- BUTTONS
-    MainTab:AddButton({
-        Name = "Spawnpoint Esp",
-        Callback = function()
-            
-            -- loadstring
-            local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
-
-            -- config
-            ESP.Players = false
-            ESP.Boxes = true
-            ESP.Names = true
-            ESP:Toggle(true)
-
-            -- object
-            ESP:AddObjectListener(Workspace.Doomspires.RED.Spawns, {
-                Name = "SpawnLocation",
-                CustomName = "Red Spawns",
-                Color = Color3.fromRGB(196, 40, 28),
-                IsEnabled = "RedSpawn",
-            })
-            ESP.RedSpawn = true
-
-            -- object
-            ESP:AddObjectListener(Workspace.Doomspires.BLUE.Spawns, {
-                Name = "SpawnLocation",
-                CustomName = "Blue Spawns",
-                Color = Color3.fromRGB(13, 105, 172),
-                IsEnabled = "BlueSpawn",
-            })
-            ESP.BlueSpawn = true
-
-            -- object
-            ESP:AddObjectListener(Workspace.Doomspires.GREEN.Spawns, {
-                Name = "SpawnLocation",
-                CustomName = "Green Spawns",
-                Color = Color3.fromRGB(75, 151, 75),
-                IsEnabled = "GreenSpawn",
-            })
-            ESP.GreenSpawn = true
-
-            -- object
-            ESP:AddObjectListener(Workspace.Doomspires.YELLOW.Spawns, {
-                Name = "SpawnLocation",
-                CustomName = "Yellow Spawns",
-                Color = Color3.fromRGB(245, 205, 48),
-                IsEnabled = "YellowSpawn",
-            })
-            ESP.YellowSpawn = true
-    end})
-
- 
-    
-
     -- LABELS
     MainTab:AddLabel("Other Stuff")
 
@@ -382,6 +328,12 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Doomspire Brickbattle", 
         Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
+
+    -- LABELS
+    UpdateTab:AddLabel("11/19/2022")
+    
+    -- PARAGRAPHS
+    UpdateTab:AddParagraph("Updates","Deleted spawnpoint esp. (Insanely buggy)")
 
     -- LABELS
     UpdateTab:AddLabel("11/08/2022")
