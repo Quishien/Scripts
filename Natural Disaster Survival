@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Survival", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
+
     -- TABS
     local LocalTab = Window:MakeTab({
         Name = "Local Player",
@@ -78,6 +79,19 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
 
     -- LABELS
     MainTab:AddLabel("Main Stuff")
+
+    -- TOGGLES
+    MainTab:AddToggle({
+        Name = "Autofarm Wins",
+        Default = false,
+        Callback = function(Value)
+            getgenv().Autofarm = Value
+            while getgenv().Autofarm == true do
+                wait(0.0000000000000000000000001)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-225.228165, 179.59996, 325.649109, -0.2571868, 7.12485418e-11, 0.966361701, -1.14957528e-08, 1, -3.13319992e-09, -0.966361701, -1.19148735e-08, -0.2571868)
+            end
+        end    
+    })
 
     -- TOGGLES
     MainTab:AddToggle({
@@ -425,6 +439,12 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Natural Disaster Surviva
         Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
+
+     -- LABELS
+     UpdateTab:AddLabel("11/20/2022")
+    
+     -- PARAGRAPHS
+     UpdateTab:AddParagraph("Updates","Added autofarm wins.")
 
     -- LABELS
     UpdateTab:AddLabel("11/05/2022")
