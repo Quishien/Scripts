@@ -1411,3 +1411,45 @@ Visuanal:AddToggle({
 end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
     end
     end})
+
+    -- TABS
+    local WipTab = Window:MakeTab({
+        Name = "W.I.P",
+        Icon = "rbxassetid://11464378096",
+        PremiumOnly = false
+    })
+    
+    -- PARAGRAPHS
+    WipTab:AddParagraph("Upcoming Features","None yet.")
+
+    -- TABS
+    local UpdateTab = Window:MakeTab({
+        Name = "Updates",
+        Icon = "rbxassetid://11464394258",
+        PremiumOnly = false
+    })
+
+     -- LABELS
+     UpdateTab:AddLabel("11/21/2022")
+    
+     -- PARAGRAPHS
+     UpdateTab:AddParagraph("Updates","Made this huge script.")
+
+    -- TABS
+    local CreditsTab = Window:MakeTab({
+        Name = "Credits",
+        Icon = "rbxassetid://11464378093",
+        PremiumOnly = false
+    })
+    
+    -- PARAGRAPHS
+    CreditsTab:AddParagraph("Made By:", "Quish#4198")
+    CreditsTab:AddParagraph("Quish:", "Feel free to DM me for any Suggestions or Bugs.")
+
+    -- BUTTONS
+    CreditsTab:AddButton({
+        Name = "Copy My Discord To Clipboard",
+        Callback = function()
+            setclipboard("Quish#4198")
+          end    
+    })
