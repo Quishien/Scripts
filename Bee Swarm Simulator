@@ -40,7 +40,7 @@ local Use2 = Window:MakeTab({
 })
 local Tp12 = Window:MakeTab({
 	Name = "Teleports",
-	Icon = "rbxassetid://11464378104",
+	Icon = "rbxassetid://11464378091",
 	PremiumOnly = false
 })
 local Mobs = Window:MakeTab({
