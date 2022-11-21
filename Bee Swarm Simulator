@@ -638,7 +638,9 @@ end
 local player = game:GetService("Players").LocalPlayer
 local pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 local maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
+wait(2)
 while player.CoreStats.Pollen.Value>=maxpollen do 
+    wait(1)
 
     player.Character:MoveTo(player.SpawnPos.Value.p)
                 wait(0.5)
@@ -708,10 +710,13 @@ end
 player = game:GetService("Players").LocalPlayer
 pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
+wait(.25)
 while player.CoreStats.Pollen.Value>=maxpollen do 
+    wait(0.25)
 
     player.Character:MoveTo(player.SpawnPos.Value.p)
                 wait(0.5)
+                game:GetService("ReplicatedStorage").Events.PlayerHiveCommand:FireServer("ToggleHoneyMaking")
                     repeat wait(0.5) 
                         if player.CoreStats.Pollen.Value < 99   then wait(5)
 wait(0.1)
@@ -779,10 +784,13 @@ Event:FireServer(A)
 player = game:GetService("Players").LocalPlayer
 pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
+wait(2)
 while player.CoreStats.Pollen.Value>=maxpollen do 
+    wait(1)
 
     player.Character:MoveTo(player.SpawnPos.Value.p)
                 wait(0.5)
+                game:GetService("ReplicatedStorage").Events.PlayerHiveCommand:FireServer("ToggleHoneyMaking")
                     repeat wait(0.5) 
                         if player.CoreStats.Pollen.Value < 99   then wait(5)
 wait(0.1)
@@ -1433,7 +1441,7 @@ end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
      UpdateTab:AddLabel("11/21/2022")
     
      -- PARAGRAPHS
-     UpdateTab:AddParagraph("Updates","Made this huge script.")
+     UpdateTab:AddParagraph("Updates","Made this huge script. Fixed the auto farm and improved it.")
 
     -- TABS
     local CreditsTab = Window:MakeTab({
