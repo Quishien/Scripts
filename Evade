@@ -200,15 +200,6 @@ end)
         end    
     })
 
-    -- TOGGLES (MainTab)
-    MainTab:AddToggle({
-        Name = "Ticket Farm",
-        Default = false,
-        Callback = function(Value)
-            Settings.TicketFarm = Value
-        end    
-    })
-
     MainTab:AddLabel("Sliders")
 
     -- SLIDERS
@@ -228,34 +219,6 @@ end)
     })
     -- Labels
     MainTab:AddLabel("Other Stuff")
-
-    MainTab:AddButton({
-        Name = "Teleport To Generator Objective",
-        Callback = function()
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Generator.Part.CFrame
-        end,   
-    })
-
-    MainTab:AddButton({
-        Name = "Teleport To Lever Objective",
-        Callback = function()
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Switch.Mover.CFrame
-        end,   
-    })
-
-    MainTab:AddButton({
-        Name = "Teleport To Transportation Objective",
-        Callback = function()
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Transportation.Part.CFrame
-        end,   
-    })
-
-    MainTab:AddButton({
-        Name = "Teleport To Key Objective",
-        Callback = function()
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Key.Key.CFrame
-        end,   
-    })
     
     MainTab:AddToggle({
         Name = "No Camera Shake",
@@ -652,16 +615,6 @@ end)
           end    
     })
 
-    ESPTab:AddButton({
-        Name = "Ticket ESP",
-        Callback = function()
-            while true do
-                repeat wait() until game.Workspace.Game.Effects.Tickets.Ticket1
-                local esp = Instance.new("Highlight")
-                esp.Parent = game.Workspace.Game.Effects.Tickets.Ticket1
-            end
-        end
-    })
 
     ESPTab:AddLabel("Other Visuals")
 
@@ -744,6 +697,36 @@ end)
             GameId = 10808838353
             TeleportService:Teleport(GameId, game.Players.LocalPlayer)
           end    
+    })
+
+    TeleportTab:AddLabel("Teleports in game")
+
+    TeleportTab:AddButton({
+        Name = "Teleport To Generator Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Generator.Part.CFrame
+        end,   
+    })
+
+    TeleportTab:AddButton({
+        Name = "Teleport To Lever Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Switch.Mover.CFrame
+        end,   
+    })
+
+    TeleportTab:AddButton({
+        Name = "Teleport To Transportation Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Transportation.Part.CFrame
+        end,   
+    })
+
+    TeleportTab:AddButton({
+        Name = "Teleport To Key Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Key.Key.CFrame
+        end,   
     })
      
     local FunTab = Window:MakeTab({
@@ -870,6 +853,12 @@ end)
         Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
+
+    -- LABELS
+    UpdateTab:AddLabel("11/22/2022")
+    
+    -- PARAGRAPHS
+    UpdateTab:AddParagraph("Updates","Removed halloween shit and added teleports to objectives.")
 
     -- LABELS
     UpdateTab:AddLabel("11/10/2022")
