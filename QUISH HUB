@@ -79,6 +79,9 @@ elseif game.PlaceId == 155615604 then
 elseif game.PlaceId == 1537690962 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Bee%20Swarm%20Simulator", true))()
     return
+elseif game.PlaceId == 662417684 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Lucky%20Blocks%20Battlegrounds", true))()
+    return
 end
 
 game.Players.LocalPlayer:Kick("No script made for this game yet.")
