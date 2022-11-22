@@ -710,7 +710,7 @@ end
 player = game:GetService("Players").LocalPlayer
 pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
-wait(.25)
+wait(0.25)
 while player.CoreStats.Pollen.Value>=maxpollen do 
     wait(0.25)
 
@@ -1018,9 +1018,9 @@ Commandopad.Name = "Commando Part"
 Commandopad.Anchored = true
 Commandopad.Transparency = 1
 Commandopad.Size = Vector3.new(10, 1, 10)
-Commandopad.Position = Vector3.new(532.56, 68.1981, 162.801)
+Commandopad.Position = Vector3.new(520.56, 60.1981, 162.801)
 wait(0.1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(532.56, 68.1981, 162.801)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(520.56, 60.1981, 162.801)
   	end    
 })
 Mobs:AddButton({
