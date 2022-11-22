@@ -229,6 +229,34 @@ end)
     -- Labels
     MainTab:AddLabel("Other Stuff")
 
+    MainTab:AddButton({
+        Name = "Teleport To Generator Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Generator.Part.CFrame
+        end,   
+    })
+
+    MainTab:AddButton({
+        Name = "Teleport To Lever Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Switch.Mover.CFrame
+        end,   
+    })
+
+    MainTab:AddButton({
+        Name = "Teleport To Transportation Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Transportation.Part.CFrame
+        end,   
+    })
+
+    MainTab:AddButton({
+        Name = "Teleport To Key Objective",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Game.Map.Parts.Objectives.Key.Key.CFrame
+        end,   
+    })
+    
     MainTab:AddToggle({
         Name = "No Camera Shake",
         Default = false,
@@ -877,4 +905,3 @@ end)
 OrionLib:Init()
 
     
-
