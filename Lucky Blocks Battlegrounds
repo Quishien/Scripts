@@ -88,6 +88,9 @@ LocalTab:AddButton({
       end    
 })
 
+-- LABELS
+Tab:AddLabel("Main Stuff")
+
 ---//SPAWNER
 Tab:AddDropdown({
 	Name = "Spawn 1 Block",
@@ -205,6 +208,9 @@ Tab:AddDropdown({
 			end
 		end
 	end})
+
+-- LABELS
+Tab:AddLabel("Other Stuff")
 	
 Tab:AddButton({
 	Name = "Kill All (Requires Hex Spitter)",
@@ -226,6 +232,9 @@ Tab:AddButton({
 	})
 	end    
 })
+
+-- LABELS
+Tab2:AddLabel("Main Stuff")
 	
 Tab2:AddButton({
 	Name = "Teleport to VoidBlock",
@@ -254,6 +263,10 @@ Tab2:AddButton({
 		Run()
 	end
 })
+
+-- LABELS
+Tab2:AddLabel("Other Stuff")
+
 Tab2:AddButton({
 	Name = "Delete Trees",
 	Callback = function()
@@ -264,6 +277,9 @@ Tab2:AddButton({
         end
 	end
 })
+
+-- LABELS
+Tab3:AddLabel("Main Keybinds")
 
 ---//Keybinds
 Tab3:AddBind({
