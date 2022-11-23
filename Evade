@@ -130,7 +130,7 @@ end)
 task.spawn(function()
     while task.wait(1) do
         if autochat == true then
-            local ohString1 = "Hydra Network on top"
+            local ohString1 = "Quish Hub on top!"
             local ohString2 = "All"
             game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
         end
@@ -409,6 +409,32 @@ end)
     })
 
     MiscTab:AddLabel("Keybinds")
+
+
+    getgenv().autojumpmpt = true
+function autojump()
+   local plr = game:GetService'Players'.LocalPlayer
+   repeat wait() until plr.Character ~= nil
+plr.Character:WaitForChild'Humanoid'.StateChanged:Connect(function(old,new)
+   if new == Enum.HumanoidStateType.Landed and autojumpmpt then
+       plr.Character:WaitForChild'Humanoid':ChangeState("Jumping")
+   end
+end)
+end
+autojump()
+game:GetService'Players'.LocalPlayer.CharacterAdded:Connect(autojump)
+MiscTab:AddBind({
+Name = "Toggle Auto BHop",
+Default = Enum.KeyCode.Q,
+Hold = false,
+Callback = function()
+if getgenv().autojumpmpt == true then
+   getgenv().autojumpmpt = false
+   else
+       getgenv().autojumpmpt = true
+end
+end    
+})
 
     MiscTab:AddBind({
         Name = "Drink Cola",
@@ -853,6 +879,13 @@ end)
         Icon = "rbxassetid://11464394258",
         PremiumOnly = false
     })
+
+    -- LABELS
+    UpdateTab:AddLabel("11/23/2022")
+    
+    -- PARAGRAPHS
+    UpdateTab:AddParagraph("Updates","Added auto bhop.")
+
 
     -- LABELS
     UpdateTab:AddLabel("11/22/2022")
