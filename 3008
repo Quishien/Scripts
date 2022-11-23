@@ -182,5 +182,4 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | 3008 [2.71]", HidePremiu
     
 
 
-
-    
+OrionLib:Init()
