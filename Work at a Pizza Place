@@ -179,10 +179,5 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Work at a Pizza Place", 
             setclipboard("Quish#4198")
           end    
     })
-    
 
-    
-
-    
-
-    
+OrionLib:Init()
