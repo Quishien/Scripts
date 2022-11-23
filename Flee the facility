@@ -155,3 +155,5 @@ local Window = OrionLib:MakeWindow({Name = "Quish Hub | Flee the facility", Hide
             setclipboard("Quish#4198")
           end    
     })
+
+OrionLib:Init()
