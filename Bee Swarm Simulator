@@ -58,6 +58,17 @@ local Visuanal = Window:MakeTab({
 	Icon = "rbxassetid://11465873040",
 	PremiumOnly = false
 })
+
+Main:AddLabel("Main Stuff")
+Dispenser:AddLabel("Main Stuff")
+Use:AddLabel("Main Stuff")
+Boosts:AddLabel("Main Stuff")
+Use2:AddLabel("Main Stuff")
+Tp12:AddLabel("Teleports in game")
+Mobs:AddLabel("Main Stuff")
+Mask:AddLabel("Main Stuff")
+Visuanal:AddLabel("Main Visuals")
+
 Dispenser:AddButton({
 	Name = "Use All Dispensers",
 	Callback = function()
@@ -183,6 +194,9 @@ Event:FireServer(mountain)
 wait(5) end    
 end
 })
+
+Boosts:AddLabel("Other Stuff")
+
 Boosts:AddButton({
 	Name = "Use Red Field Booster",
 	Callback = function()
@@ -275,6 +289,9 @@ Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(TDrink)
   	end    
 })
+
+Use2:AddLabel("Other Stuff")
+
 Use2:AddButton({
 	Name = "Use Red Extract",
 	Callback = function()
@@ -425,6 +442,9 @@ Dispenser:AddToggle({
             end
             end
 })
+
+Dispenser:AddLabel("Other Stuff")
+
 Dispenser:AddButton({
 	Name = "Use Glue Dispenser",
 	Callback = function()
@@ -942,6 +962,9 @@ Tp12:AddButton({
     player.Character:MoveTo(player.SpawnPos.Value.p)
   	end    
 })
+
+Tp12:AddLabel("Other Teleports")
+
 Tp12:AddButton({
 	Name = "Join Random Server",
 	Callback = function()
@@ -1069,6 +1092,9 @@ Mobs:AddToggle({
                         
 end
 })
+
+Mobs:AddLabel("Other Stuff")
+
 Mobs:AddButton({
     Name = "Keep teleporting to Windy",
     allback = function()
@@ -1128,12 +1154,15 @@ Mobs:AddToggle({
              game.Players.LocalPlayer.Character.Humanoid.HipHeight = 3
          end 
 end})
+
+Main:AddLabel("Other Stuff")
+
 Main:AddSlider({
     Name = "Walkspeed",
     Min = 1,
     Max = 200,
     Default = 20,
-    Color = Color3.fromRGB(230,255,255),
+    Color = Color3.fromRGB(255,255,255),
     Increment = 1,
     ValueName = " Speed",
     Callback = function(preston)
@@ -1383,6 +1412,9 @@ syn.secure_call(function()
 end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
   	end
 })
+
+Visuanal:AddLabel("Other Visuals")
+
 Visuanal:AddToggle({
     Name = "Flame Walk",
     Default = false,
@@ -1461,3 +1493,4 @@ end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
             setclipboard("Quish#4198")
           end    
     })
+OrionLib:Init()
