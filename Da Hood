@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Quish Hub | Da Hood 🎃", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
+local Window = OrionLib:MakeWindow({Name = "Quish Hub | Da Hood", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
 
 local Aiming = loadstring(game:HttpGet("https://pastebin.com/raw/xMYubpbC"))()
 Aiming.ShowFOV = false
@@ -800,4 +800,4 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
 end)
-    
+OrionLib:Init()
