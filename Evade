@@ -529,18 +529,6 @@ end
                 })
         end    
     })
-
-    -- KEYBINDS (MiscTab)
-    MiscTab:AddBind({
-        Name = "Rejoin Server",
-        Default = Enum.KeyCode.P,
-        Hold = false,
-        Callback = function(Keybind)
-            local ts = game:GetService("TeleportService")
-            local p = game:GetService("Players").LocalPlayer
-            ts:Teleport(game.PlaceId, p)
-        end
-    })
      
     local ESPTab = Window:MakeTab({
         Name = "Visuals",
