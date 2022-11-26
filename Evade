@@ -873,7 +873,7 @@ end)
     UpdateTab:AddLabel("11/26/2022")
     
     -- PARAGRAPHS
-    UpdateTab:AddParagraph("Updates","Improved money farm")
+    UpdateTab:AddParagraph("Updates","Improved money farm.")
 
     -- LABELS
     UpdateTab:AddLabel("11/23/2022")
