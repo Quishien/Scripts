@@ -44,11 +44,11 @@ local revive = function()
     local downedplr = GetDownedPlr()
     if downedplr ~= nil and downedplr:FindFirstChild('HumanoidRootPart') then
         task.spawn(function()
-            while task.wait() do
+            while task.wait(0) do
                 if localplayer.Character then
                     workspace.Game.Settings:SetAttribute("ReviveTime", 2.2)
-                    localplayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(downedplr:FindFirstChild('HumanoidRootPart').Position.X, downedplr:FindFirstChild('HumanoidRootPart').Position.Y + 3, downedplr:FindFirstChild('HumanoidRootPart').Position.Z)
-                    task.wait()
+                    localplayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(downedplr:FindFirstChild('HumanoidRootPart').Position.X, downedplr:FindFirstChild('HumanoidRootPart').Position.Y - 5, downedplr:FindFirstChild('HumanoidRootPart').Position.Z)
+                    task.wait(0)
                     game:GetService("ReplicatedStorage").Events.Revive.RevivePlayer:FireServer(tostring(downedplr), false)
                     task.wait(4.5)
                     game:GetService("ReplicatedStorage").Events.Revive.RevivePlayer:FireServer(tostring(downedplr), true)
@@ -87,10 +87,10 @@ task.spawn(function()
         if Settings.moneyfarm then
             if localplayer.Character and localplayer.Character:GetAttribute("Downed") then
                 game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
-                task.wait(3)
+                task.wait(2)
             else
                 revive()
-                task.wait(1)
+                task.wait(0)
             end
         end
         if Settings.moneyfarm == false and Settings.afkfarm and localplayer.Character:FindFirstChild('HumanoidRootPart') ~= nil then
@@ -870,11 +870,16 @@ end)
     })
 
     -- LABELS
+    UpdateTab:AddLabel("11/26/2022")
+    
+    -- PARAGRAPHS
+    UpdateTab:AddParagraph("Updates","Improved money farm")
+
+    -- LABELS
     UpdateTab:AddLabel("11/23/2022")
     
     -- PARAGRAPHS
     UpdateTab:AddParagraph("Updates","Added auto bhop.")
-
 
     -- LABELS
     UpdateTab:AddLabel("11/22/2022")
