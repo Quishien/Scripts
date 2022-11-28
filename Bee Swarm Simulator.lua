@@ -1068,7 +1068,7 @@ game:GetService("TeleportService"):Teleport(placeId)
 })
 Tp12:AddDropdown({
     Name = "Teleport To",
-    Default = "Black Bear",
+    Default = "",
     Options = {"Black Bear","Brown Bear","Panda Bear","Polar Bear","Science Bear","Mother Bear","Spirit Bear","Gummy Bear","Onett","Tunnel Bear","King Beetle","Stick Bug","Mythic Meteor Shower","Basic Egg Shop","Tool Shop","Ticket Shop","Ticket Shop 2","Clover Field","Spider Field","Blue Flower Field","Sunflower Field","StrawBerry Field","Dandelion Field","Bamboo Field","Rose Field","Mushroom Field","Cactus Field","Pumpkin Field","MountainTop Field","PineTree Field","Pineapple Field","Coconut Field","Pepper Field","Stump Field","Red HQ","Blue HQ","MountainTop Shop","Royal Jelly Shop",},
     Callback = function(Value)
 if Value == "Black Bear" then 
