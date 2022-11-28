@@ -113,8 +113,8 @@ Use:AddToggle({
     Name = "Auto Use Field Dice",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local fielddice = cointr
+         while fielddice == true do 
 local Dice1 = {["Name"] = "Field Dice"}
 local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(Dice1)
@@ -133,8 +133,8 @@ Use:AddToggle({
     Name = "Auto Use Smooth Dice",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local smoothdice = cointr
+         while smoothdice == true do 
 local Dice2 = {["Name"] = "Smooth Dice"}
 Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(Dice2)  
@@ -154,8 +154,8 @@ Use:AddToggle({
     Name = "Auto Use Loaded Dice",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local loadeddice = cointr
+         while loadeddice == true do 
 local Dice3 = {["Name"] = "Loaded Dice"}
 Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(Dice3)
@@ -180,8 +180,8 @@ Boosts:AddToggle({
     Name = "Auto Use All Field Booster",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local useallfield = cointr
+         while useallfield == true do 
 local red = "Red Field Booster"
 local Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(red)
@@ -209,8 +209,8 @@ Boosts:AddToggle({
     Name = "Auto Use Red Field Booster",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local redfieldboost = cointr
+         while redfieldboost == true do 
 local red = "Red Field Booster"
 local Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(red)
@@ -229,8 +229,8 @@ Boosts:AddToggle({
     Name = "Auto Use Blue Field Booster",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local bluefieldboost = cointr
+         while bluefieldboost == true do 
 local blue = "Blue Field Booster"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(blue)
@@ -249,8 +249,8 @@ Boosts:AddToggle({
     Name = "Auto Use Field Booster",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local usefieldboost = cointr
+         while usefieldboost == true do 
 local mountain = "Field Booster"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(mountain)
@@ -376,7 +376,7 @@ Main:AddToggle({
     Name = "Auto Dig",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
+        local turnoff4 = cointr
          while turnoff4 == true do
              wait(0.1)
 local function collectorSteal()
@@ -409,8 +409,8 @@ Dispenser:AddToggle({
     Name = "Auto Use All Dispensers",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff5 = cointr
-         while turnoff5 == true do 
+         local alldisp = cointr
+         while alldisp == true do 
  local A_1 = "Glue Dispenser"
                   Event = game:GetService("ReplicatedStorage").Events.ToyEvent
                   Event:FireServer(A_1)
@@ -457,8 +457,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Glue Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local gluedisp = cointr
+         while gluedisp == true do 
 local A_1 = "Glue Dispenser"
 local Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -477,8 +477,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Wealth Clock",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local wealthclock = cointr
+         while wealthclock == true do 
 A_1 = "Wealth Clock"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -497,8 +497,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Coconut Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local coconutdisp = cointr
+         while coconutdisp == true do 
 A_1 = "Coconut Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -517,8 +517,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Strawberry Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local strawberrydisp = cointr
+         while strawberrydisp == true do 
 A_1 = "Strawberry Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -537,8 +537,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Treat Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local treatdisp = cointr
+         while treatdisp == true do 
 A_1 = "Treat Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -557,8 +557,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Free Ant Pass Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local freeant = cointr
+         while freeant == true do 
 A_1 = "Free Ant Pass Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -577,8 +577,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Blueberry Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         local bluedisp = cointr
+         while bluedisp == true do 
 A_1 = "Blueberry Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -597,8 +597,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Honey Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         _G.honeydisp = cointr
+         while honeydisp == true do 
 A_1 = "Honey Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -617,8 +617,8 @@ Dispenser:AddToggle({
     Name = "Auto Use Free Royal Jelly Dispenser",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         _G.freeroyaldisp = cointr
+         while freeroyaldisp == true do 
 A_1 = "Free Royal Jelly Dispenser"
 Event = game:GetService("ReplicatedStorage").Events.ToyEvent
 Event:FireServer(A_1)
@@ -646,15 +646,15 @@ Main:AddToggle({
     Name = "Auto Farm [Slow]",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         if turnoff4 == true then
+         _G.slowfarm = cointr
+         if slowfarm == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.cords
 wait(1)
 local A = {["Name"] = "Sprinkler Builder"}
 local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(A)
 end
-         while turnoff4 == true do 
+         while slowfarm == true do 
 local player = game:GetService("Players").LocalPlayer
 local pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 local maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
@@ -718,15 +718,15 @@ Main:AddToggle({
     Name = "Auto Farm [Fast]",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         if turnoff4 == true then
+         local fastfarm = cointr
+         if fastfarm == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.cords
 wait(1)
 local A = {["Name"] = "Sprinkler Builder"}
 local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(A)
 end
-         while turnoff4 == true do 
+         while fastfarm == true do 
 player = game:GetService("Players").LocalPlayer
 pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
@@ -789,75 +789,11 @@ end
          end
 })
 Main:AddToggle({
-    Name = "Auto Farm [Walk]",
-    Default = false,
-    Callback = function(cointr91)
-         _G.turnoff11 = cointr91
-         if turnoff11 == true then
-                              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.cords
-wait(0.5)
-         A = {["Name"] = "Sprinkler Builder"}
-local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
-Event:FireServer(A)
-         plr = game.Players.LocalPlayer
-         while turnoff11 == true do
-player = game:GetService("Players").LocalPlayer
-pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
-maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
-wait(2)
-while player.CoreStats.Pollen.Value>=maxpollen do 
-    wait(1)
-
-    player.Character:MoveTo(player.SpawnPos.Value.p)
-                wait(0.5)
-                game:GetService("ReplicatedStorage").Events.PlayerHiveCommand:FireServer("ToggleHoneyMaking")
-                    repeat wait(0.5) 
-                        if player.CoreStats.Pollen.Value < 99   then wait(5)
-wait(0.1)
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.cords 
-wait(0.1)
-                            end until player.CoreStats.Pollen.Value < 99     
-end
- local function collectorSteal()
-        for i,v in pairs(game.Players:GetChildren()) do
-            if v.Name ~= game.Players.LocalPlayer.Name then
-                if v then
-                    if v.Character then
-                        if v.Character:FindFirstChildWhichIsA("Tool") then
-                            if v.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("ClickEvent") then
-                    v.Character:FindFirstChildWhichIsA("Tool").ClickEvent:FireServer()
-                end
-            end
-        end
-        end
-        end
-        end
-    end
-	if game.Players.LocalPlayer then 
-		if game.Players.LocalPlayer.Character then 
-			if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then 
-				if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChild("ClickEvent", true) then 
-				tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") or nil 
-				end 
-			end 
-		end 
-	if tool then getsenv(tool.ClientScriptMouse).collectStart(game:GetService("Players").LocalPlayer:GetMouse()) end collectorSteal() workspace.NPCs.Onett.Onett["Porcelain Dipper"].ClickEvent:FireServer() end
-	wait(.1)
-	for i,v in pairs(game:GetService("Workspace").Collectibles:GetDescendants()) do
-    if v:IsA("Part") and (plr.Character.HumanoidRootPart.Position - v.Position).Magnitude < 50 then
-        plr.Character.Humanoid:MoveTo(v.Position)
-end
-end
-end
-end
-end
-})
-Main:AddToggle({
     Name = "Auto Convert Pollen",
     Default = false,
     Callback = function(cointr9)
-         _G.turnoff5 = cointr9
-         while turnoff5 == true do
+         _G.convpoll = cointr9
+         while convpoll == true do
 local player = game:GetService("Players").LocalPlayer
 local pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 local maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
@@ -878,8 +814,8 @@ Main:AddToggle({
     Name = "Auto Use Micro-Converter",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do
+         _G.micconvert = cointr
+         while micconvert == true do
 local player = game:GetService("Players").LocalPlayer
 local pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 local maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
@@ -896,8 +832,8 @@ Main:AddToggle({
     Name = "Auto Use Instant Converter",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do
+         _G.instaconv = cointr
+         while instaconv == true do
 local player = game:GetService("Players").LocalPlayer
 local pollenLbl = player.Character:FindFirstChild("ProgressLabel",true)
 local maxpollen = tonumber(pollenLbl.Text:match("%d+$"))
@@ -922,8 +858,8 @@ Main:AddToggle({
     Name = "Auto Use Coconut",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         _G.usecoc = cointr
+         while usecoc == true do 
 local Coconut = {["Name"] = "Coconut"}
 Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(Coconut)
@@ -934,8 +870,8 @@ Main:AddToggle({
     Name = "Auto Use Gumdrops",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do
+         _G.usegum = cointr
+         while usegum == true do
 local Gumdrops = {["Name"] = "Gumdrops"}
 Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(Gumdrops)
@@ -947,8 +883,8 @@ Main:AddToggle({
     Name = "Auto Place Sprinkler",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         while turnoff4 == true do 
+         _G.placsprink = cointr
+         while placsprink == true do 
 local A = {["Name"] = "Sprinkler Builder"}
 local Event = game:GetService("ReplicatedStorage").Events.PlayerActivesCommand
 Event:FireServer(A)
@@ -974,7 +910,7 @@ game:GetService("TeleportService"):Teleport(placeId)
 })
 Tp12:AddDropdown({
     Name = "Teleport To",
-    Default = "Black Bearl",
+    Default = "",
     Options = {"Black Bear","Brown Bear","Panda Bear","Polar Bear","Science Bear","Mother Bear","Spirit Bear","Gummy Bear","Onett","Tunnel Bear","King Beetle","Stick Bug","Mythic Meteor Shower","Basic Egg Shop","Tool Shop","Ticket Shop","Ticket Shop 2","Clover Field","Spider Field","Blue Flower Field","Sunflower Field","StrawBerry Field","Dandelion Field","Bamboo Field","Rose Field","Mushroom Field","Cactus Field","Pumpkin Field","MountainTop Field","PineTree Field","Pineapple Field","Coconut Field","Pepper Field","Stump Field","Red HQ","Blue HQ","MountainTop Shop","Royal Jelly Shop",},
     Callback = function(Value)
 if Value == "Black Bear" then 
@@ -1078,9 +1014,9 @@ Mobs:AddToggle({
     Name = "Auto Kill Mondo Chick[In testing]",
     Default = false,
     Callback = function(assmore)
-         _G.turnoff54 = assmore
-         if turnoff54 == true then
-    while turnoff54 == true do
+         _G.killmondo = assmore
+         if killmondo == true then
+    while killmondo == true do
                      
                              mondopition = game.Workspace.Monsters["Mondo Chick (Lvl 8)"].Head.Position
                              api.tween(0.3,CFrame.new(mondopition.x, mondopition.y + 30, mondopition.z)) game.Players.LocalPlayer.Character.Humanoid.HipHeight = 40                        
@@ -1105,9 +1041,9 @@ end end end})
 Mobs:AddToggle({
     Name = "Kill Windy Bee",
     Callback = function(aa)
-       _G.pon1 = aa
-       if pon1 == true then
-    while pon1 == true do wait(.3) for _,v in pairs(game.workspace.NPCBees:GetChildren()) do
+       _G.windybee = aa
+       if windybee == true then
+    while windybee == true do wait(.3) for _,v in pairs(game.workspace.NPCBees:GetChildren()) do
       if v.Name == "Windy" then game.Players.LocalPlayer.Character.Humanoid.HipHeight = 35
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
 end end
@@ -1135,8 +1071,8 @@ Mobs:AddToggle({
     Name = "Kill Viciuos Bee",
     Default = false,
     Callback = function(cointr)
-         _G.turnoff4 = cointr
-         if turnoff4 == true then
+         _G.vicibee = cointr
+         if vicibee == true then
          while turnoff4 == true do
              wait()
 			local vichumanoid = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
@@ -1307,20 +1243,17 @@ end
 Visuanal:AddButton({
 	Name = "Spawn Mythic Meteor",
 	Callback = function()
-    syn.secure_call(function() 
         require(game.ReplicatedStorage.LocalFX.MythicMeteor)({
         Pos = game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         Dur = 0.6,
         Radius = 16,
         Delay = 1.5,
     })
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
+
 Visuanal:AddButton({
 	Name = "Spawn Coconut",
 	Callback = function()
-      syn.secure_call(function() 
         require(game.ReplicatedStorage.LocalFX.FallingCoconut)({
         Pos = game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         Dur = 0.6,
@@ -1328,13 +1261,10 @@ Visuanal:AddButton({
         Delay = 1.5,
         Friendly = true
     })
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddButton({
 	Name = "Spawn Hostile Coconut",
 	Callback = function()
-    syn.secure_call(function() 
         require(game.ReplicatedStorage.LocalFX.FallingCoconut)({
         Pos = game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         Dur = 0.6,
@@ -1342,26 +1272,21 @@ Visuanal:AddButton({
         Delay = 1.5,
         Friendly = false
     })
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddButton({
 	Name = "Spawn Jellybean",
 	Callback = function()
 jellybeans = {"Navy","Blue","Spoiled","Merigold","Teal","Periwinkle","Pink","Slate","White","Black","Green","Brown","Yellow","Maroon","Red"}
-syn.secure_call(function() 
         require(game.ReplicatedStorage.LocalFX.JellyBeanToss)({
         Start = game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         Type = jellybeans[math.random(1,#jellybeans)],
         End = (game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame * CFrame.new(0,0,-35)).p + Vector3.new(math.random(1,20),0,math.random(1,20))
     })
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddButton({
 	Name = "Spawn Puffshroom Spore",
 	Callback = function()
-task.spawn(function() syn.secure_call(function()
+task.spawn(function() 
 field = game:GetService("Workspace").FlowerZones:GetChildren()[math.random(1,#game:GetService("Workspace").FlowerZones:GetChildren())]
 pos = field.CFrame.p
 require(game.ReplicatedStorage.LocalFX.PuffshroomSporeThrow)({
@@ -1371,23 +1296,18 @@ require(game.ReplicatedStorage.LocalFX.PuffshroomSporeThrow)({
 end, game.Players.LocalPlayer.PlayerScripts.ClientInit) 
 wait(10)
 workspace.Particles:FindFirstChild("SporeCloud"):Destroy()
-end)
-  	end
-})
+end})
+
 Visuanal:AddButton({
 	Name = "Spawn Party Popper",
 	Callback = function()
-syn.secure_call(function() 
 require(game:GetService("ReplicatedStorage").LocalFX.PartyPopper)({
 Pos = game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
 })
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddButton({
 	Name = "Spawn Flame",
 	Callback = function()
-syn.secure_call(function()
         require(game.ReplicatedStorage.LocalFX.LocalFlames).AddFlame(
         game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         10,
@@ -1395,13 +1315,10 @@ syn.secure_call(function()
         game.Players.LocalPlayer.UserId,
         false
     )
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddButton({
 	Name = "Spawn Dark Flame",
 	Callback = function()
-syn.secure_call(function()
         require(game.ReplicatedStorage.LocalFX.LocalFlames).AddFlame(
         game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         10,
@@ -1409,9 +1326,7 @@ syn.secure_call(function()
         game.Players.LocalPlayer.UserId,
         true
     )
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-  	end
-})
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 
 Visuanal:AddLabel("Other Visuals")
 
@@ -1422,7 +1337,6 @@ Visuanal:AddToggle({
         _G.Asshole = ass
         while Asshole == true do
             wait(0.1)
-            syn.secure_call(function()
         require(game.ReplicatedStorage.LocalFX.LocalFlames).AddFlame(
         game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         10,
@@ -1430,9 +1344,7 @@ Visuanal:AddToggle({
         game.Players.LocalPlayer.UserId,
         false
     )
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-        end
-    end})
+end end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
 Visuanal:AddToggle({
     Name = "Dark Flame Walk",
     Default = false,
@@ -1440,7 +1352,6 @@ Visuanal:AddToggle({
     _G.Asshole2 = ass2
     while Asshole2 == true do
         wait(0.1)
-        syn.secure_call(function()
         require(game.ReplicatedStorage.LocalFX.LocalFlames).AddFlame(
         game.Players.LocalPlayer.Character.Humanoid.RootPart.CFrame.p,
         10,
@@ -1448,10 +1359,8 @@ Visuanal:AddToggle({
         game.Players.LocalPlayer.UserId,
         true
     )
-end, game.Players.LocalPlayer.PlayerScripts.ClientInit)
-    end
-    end})
-
+end 
+end, game.Players.LocalPlayer.PlayerScripts.ClientInit})
     -- TABS
     local WipTab = Window:MakeTab({
         Name = "W.I.P",
