@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Quish Hub | Da Hood", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
+local Window = OrionLib:MakeWindow({Name = "Quish Hub | Da Hood 🎃", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
 
 local Aiming = loadstring(game:HttpGet("https://pastebin.com/raw/xMYubpbC"))()
 Aiming.ShowFOV = false
@@ -31,7 +31,7 @@ local DaHoodSettings = {
     Prediction = 0.178
 }
 
-getgenv().DaHoodSettings = DaHoodSettings
+_G.DaHoodSettings = DaHoodSettings
 
 
 targetplr = ""
