@@ -8,13 +8,13 @@ local Light = game:GetService("Lighting")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Quish Hub | 🎟️ Evade", HidePremium = true, IntroEnabled = true, IntroText = "Quish Hub", SaveConfig = true, ConfigFolder = "QuishConfig"})
 
-getgenv().autojumpmpt = false
-getgenv().Fakemoney = false
-getgenv().revivedie = false
-getgenv().autowistle = false
-getgenv().autochat = false
-getgenv().AutoDrink = false
-getgenv().Settings = {
+_G.autojumpmpt = false
+_G.Fakemoney = false
+_G.revivedie = false
+_G.autowistle = false
+_G.autochat = false
+_G.AutoDrink = false
+_G.Settings = {
     moneyfarm = false,
     afkfarm = false,
     NoCameraShake = false,
@@ -412,7 +412,7 @@ end)
     MiscTab:AddLabel("Keybinds")
 
 
-    getgenv().autojumpmpt = true
+    _G.autojumpmpt = true
 function autojump()
    local plr = game:GetService'Players'.LocalPlayer
    repeat wait() until plr.Character ~= nil
@@ -429,10 +429,10 @@ Name = "Toggle Auto BHop",
 Default = Enum.KeyCode.Q,
 Hold = false,
 Callback = function()
-if getgenv().autojumpmpt == true then
-   getgenv().autojumpmpt = false
+if _G.autojumpmpt == true then
+   _G.autojumpmpt = false
    else
-       getgenv().autojumpmpt = true
+       _G.autojumpmpt = true
 end
 end    
 })
@@ -638,7 +638,7 @@ end
         Name = "Bots tracers",
         Default = true,
         Callback = function(Value)
-            getgenv().toggleespmpt = Value
+            _G.toggleespmpt = Value
         end    
     })
  
@@ -646,7 +646,7 @@ end
         Name = "Colour",
         Default = Color3.fromRGB(255, 255, 255),
         Callback = function(Value)
-            getgenv().mptespcolour = Value
+            _G.mptespcolour = Value
         end  
     })
 
@@ -796,7 +796,7 @@ end
     local cam = workspace.CurrentCamera
     local rs = game:GetService'RunService'
  
-    getgenv().toggleespmpt = true
+    _G.toggleespmpt = true
     function esp(plr)
         if game:GetService'Players':GetPlayerFromCharacter(plr) == nil then
             local rat = Drawing.new("Line")
@@ -807,8 +807,8 @@ end
                     rat.Visible = toggleespmpt
                     rat.From = Vector2.new(cam.ViewportSize.X / 2,cam.ViewportSize.Y / 1)
                     rat.To = Vector2.new(vector.X,vector.Y)
-                    rat.Color = getgenv().mptespcolour
-                    rat.Thickness = getgenv().mptespthickness
+                    rat.Color = _G.mptespcolour
+                    rat.Thickness = _G.mptespthickness
                     else
                         rat.Visible = false
                 end
