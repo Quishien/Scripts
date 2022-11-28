@@ -1,86 +1,83 @@
 if game.PlaceId == 2913303231 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Obby%20Creator%20Simple%20Script"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Obby%20Creator.lua"))() -- Obby Creator
     return
 elseif game.PlaceId == 1215581239 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doomspire%20Brickbattle", true))()
-    return
-elseif game.PlaceId == 8726743209 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Refinery%20Caves%20Script", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Doomspire%20Brickbattle.lua", true))() -- Doomspire Brickbattle
     return
 elseif game.PlaceId == 6839171747 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Doors", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Doors.lua", true))() -- Doors
     return
 elseif game.PlaceId == 189707 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Natural%20Disaster%20Survival", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Natural%20Disaster%20Survival.lua", true))() -- Natural Disaster Survival
     return
 elseif game.PlaceId == 2788229376 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Da%20Hood", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Da%20Hood.lua", true))() -- Da Hood
     return
 elseif game.PlaceId == 7213786345 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Da%20Hood", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Da%20Hood.lua", true))() -- Da Hood
     return
 elseif game.PlaceId == 893973440 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Flee%20the%20facility", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Flee%20The%20Facility.lua", true))() -- Flee the Facility
     return
 elseif game.PlaceId == 9872472334 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10324346056 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10324347967 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10324346056 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10539706691 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10662542523 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 10808838353 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 11353532384 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 11353528705 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Evade", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Evade.lua", true))() -- Evade
     return
 elseif game.PlaceId == 537413528 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/BABFT.lua", true))() -- BABFT
     return
 elseif game.PlaceId == 1930665568 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/BABFT.lua", true))() -- BABFT
     return
 elseif game.PlaceId == 1930863474 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/BABFT.lua", true))() -- BABFT
     return
 elseif game.PlaceId == 1930866268 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/BABFT", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/BABFT.lua", true))() -- BABFT
     return
 elseif game.PlaceId == 2768379856 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/3008", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/3008.lua", true))() -- 3008
     return
 elseif game.PlaceId == 2898101897 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/3008", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/3008.lua", true))() -- 3008
     return
 elseif game.PlaceId == 3824662112 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/3008", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/3008.lua", true))() -- 3008
     return
 elseif game.PlaceId == 192800 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Work%20at%20a%20Pizza%20Place", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Work%20At%20A%20Pizza%20Place.lua", true))() -- Work at a pizza place
     return
 elseif game.PlaceId == 155615604 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Prison%20Life", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Prison%20Life.lua", true))() -- Prison Life
     return
 elseif game.PlaceId == 1537690962 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Bee%20Swarm%20Simulator", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Bee%20Swarm%20Simulator.lua", true))() -- Bee Swarm Simulator
     return
 elseif game.PlaceId == 662417684 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/main/Lucky%20Blocks%20Battlegrounds", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Synapse-X/Lucky%20Blocks%20Battlegrounds.lua", true))() -- Lucky Blocks Battlegrounds
     return
 end
 
