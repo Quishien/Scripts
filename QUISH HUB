@@ -27,33 +27,6 @@ elseif game.PlaceId == 7213786345 then
 elseif game.PlaceId == 893973440 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Flee%20the%20facility", true))() -- Flee the Facility
     return
-elseif game.PlaceId == 9872472334 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10324346056 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10324347967 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10324346056 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10539706691 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10662542523 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 10808838353 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 11353532384 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
-elseif game.PlaceId == 11353528705 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/Evade", true))() -- Evade
-    return
 elseif game.PlaceId == 537413528 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Quishien/Scripts/Other-Exploits/BABFT", true))() -- BABFT
     return
